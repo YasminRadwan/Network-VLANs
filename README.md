@@ -1,10 +1,11 @@
-# VLANs & Inter-VLAN Routing – Cisco Packet Tracer
+# VLANs Configuration – Cisco Packet Tracer
 
 ## Overview
 This project demonstrates the implementation of Virtual Local Area Networks (VLANs)
-to logically segment a Layer 2 network and improve performance and security.
+to segment a network logically and improve security, performance, and management.
 
-Inter-VLAN routing is configured to allow controlled communication between VLANs.
+It covers Access VLANs, Trunk Ports, and Inter-VLAN Routing using Router-on-a-Stick,
+making the configuration adaptable to various network scenarios.
 
 ---
 
@@ -13,53 +14,56 @@ Inter-VLAN routing is configured to allow controlled communication between VLANs
 - Cisco IOS
 - VLANs
 - Trunking (802.1Q)
-- Inter-VLAN Routing
+- Inter-VLAN Routing (Router-on-a-Stick)
 - TCP/IP
 
 ---
 
 ## Configuration Summary
+The configuration includes:
+
 - VLAN creation and naming
-- Access ports assigned to specific VLANs
-- Trunk port configuration between switch and router
-- Inter-VLAN routing using Router-on-a-Stick
-- Basic network segmentation
+- Assigning Access Ports to specific VLANs
+- Configuring Trunk Ports between switches and/or routers
+- Configuring Inter-VLAN Routing using sub-interfaces
+- Verification of connectivity and VLAN functionality
 
 ---
 
 ## Key Concepts Covered
-- Network segmentation using VLANs
-- Broadcast domain isolation
+- VLAN segmentation and broadcast domain isolation
 - Access vs Trunk ports
 - 802.1Q encapsulation
 - Inter-VLAN communication
+- Layer 2 and Layer 3 device configuration
+- Verification using CLI commands
 
 ---
 
 ## Verification
-- VLANs verified using CLI commands
-- Trunk link status confirmed
-- Successful ping between devices in different VLANs
-- Inter-VLAN routing validated
+Use the following commands to verify configurations:
+
+- `show vlan brief` – Check VLANs and port assignments  
+- `show interfaces trunk` – Verify trunk ports  
+- `show ip interface brief` – Check interface status and IPs  
+- `ping <destination_ip>` – Test inter-VLAN connectivity  
+- `show running-config` – Review device configuration
 
 ---
 
 ## Files Included
-- `VLANs_Lab.pkt`
-- `config.txt`
-- `README.md`
+- `VLANs_Lab.pkt` – Packet Tracer file  
+- `config.txt` – Full configuration exported from devices  
+- `README.md` – This documentation
 
 ---
 
 ## How to Use
-1. Open the `.pkt` file using Cisco Packet Tracer
-2. Review VLAN and trunk configurations on the switch
-3. Review sub-interface configuration on the router
-4. Verify connectivity using:
-show vlan brief
-show interfaces trunk
-show ip interface brief
-
+1. Open the `.pkt` file in Cisco Packet Tracer  
+2. Review Access and Trunk Port assignments on switches  
+3. Review sub-interface and routing configuration on routers  
+4. Test connectivity between devices in different VLANs  
+5. Use verification commands to ensure correct setup
 
 ---
 
@@ -67,3 +71,5 @@ show ip interface brief
 **Yasmin Radwan**  
 Networking & Security Trainee  
 CCNA Certified
+
+
